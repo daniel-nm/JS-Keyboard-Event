@@ -1,0 +1,81 @@
+@use './variables'as *;
+
+.card {
+  box-sizing: border-box;
+  border: 1px solid currentColor;
+  padding: 1.5rem;
+  margin-bottom: 2.5rem;
+
+  @media screen and (min-width: 35.9375em) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 0;
+  }
+
+  &__type {
+    color: $accent;
+    margin-bottom: 1rem;
+    margin-top: 0;
+  }
+
+  &__title {
+    line-height: 3rem;
+    font-weight: $font-bold;
+    margin-bottom: 1rem;
+
+    @media screen and (min-width: 35.9375em) {
+      margin-bottom: 0;
+    }
+
+    & span {
+      display: block;
+    }
+  }
+
+  &__desc {
+    line-height: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+
+    @media screen and (min-width: 35.9375em) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__value {
+    font-size: 2rem;
+    font-weight: $font-black;
+    margin: 0 0 2rem 0;
+
+    @media screen and (min-width: 35.9375em) {
+      font-size: 4rem;
+    }
+
+
+    @media screen and (min-width: 65em) {
+      font-size: 6rem;
+    }
+  }
+
+  &__edit {
+    color: $accent;
+    margin: 0;
+  }
+
+  &:nth-child(odd) {
+    background-color: $darkShade;
+    color: $lightShade;
+  }
+
+  &:nth-child(even) {
+    background-color: $lightShade;
+    color: $darkShade;
+
+    & .card__type,
+    & .card__edit {
+      color: $darkShade;
+    }
+  }
+
+}

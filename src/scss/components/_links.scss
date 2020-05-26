@@ -1,0 +1,23 @@
+@use './variables'as *;
+
+a {
+  color: $darkShade;
+  display: inline-block;
+  text-decoration: none;
+  margin-top: 0.5rem;
+  transition: background 300ms, color 300ms, padding 300ms;
+  padding: 1rem 0;
+
+  @media screen and (min-width: 60em) {
+    a {
+      margin-left: 0.5rem;
+      margin-top: 0;
+    }
+  }
+
+  &:hover {
+    background-color: $darkShade;
+    color: $lightShade;
+    padding: 1rem 0.5rem;
+  }
+}
