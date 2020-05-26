@@ -1,0 +1,19 @@
+@use '../variables'as *;
+
+.header {
+  border-bottom: 1px solid currentColor;
+  margin-bottom: 4rem;
+  padding: 1.5rem 0;
+
+  &__title {
+    font-size: 1rem;
+    font-weight: $font-light;
+    line-height: 2.5rem;
+
+    &--keyword {
+      display: block;
+      font-size: 2rem;
+      font-weight: $font-black;
+    }
+  }
+}
